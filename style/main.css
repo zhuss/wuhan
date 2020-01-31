@@ -1,0 +1,113 @@
+body,html{
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  user-select: none;
+}
+
+.app{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: url("../image/bg.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.view-start{
+  position: absolute;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+}
+.view-start>.content{
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  line-height: 40px;
+}
+.view-start .btn-start{
+  width: 200px;
+  height: 50px;
+  background: #00ff00;
+  color: #fff;
+  border: none;
+  border-radius:0;
+  font-size: 16px;
+}
+
+.view-time{
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,.6);
+}
+
+.view-time>.time-wrap{
+  font-size: 20px;
+  color: #ff0000;
+  text-align: center;
+}
+
+.view-play{
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.view-play > .coronavirus{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: url("../image//1.jpg") no-repeat center;
+  background-size: 100%;
+  border-radius: 40px;
+}
+
+.view-end{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.8);
+  color: #fff;
+  display: none;
+  z-index: 1001;
+}
+
+.view-end > .count-wrap{
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  line-height: 40px;
+}
+
+.view-end .replay-btn{
+  width: 200px;
+  height: 50px;
+  background: #00ff00;
+  color: #fff;
+  border: none;
+  border-radius:0;
+  font-size: 16px;
+}
