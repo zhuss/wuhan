@@ -11,7 +11,8 @@ let viewPlay = document.querySelector(".view-play");
 
 let viewEnd = document.querySelector(".view-end");
 
-let audio = document.querySelectorAll(".audio");
+// let audio = document.querySelectorAll(".audio");
+ let audio = document.querySelector(".audio");
 
 let time = 20;
 
@@ -25,6 +26,7 @@ let heigth = document.body.clientHeight;
 console.log(width);
 console.log(heigth);
 
+createjs.Sound.registerSound( {src:"file/tap.mp3", id:"tap"} );
 
 //点击开始按钮
 startBtn.onclick = function(){
@@ -74,7 +76,7 @@ function createCoronavirus(){
   coronavirus.style="left:"+left+"px;top:"+top+"px";
   viewPlay.appendChild(coronavirus);
   coronavirus.addEventListener("click",function(){
-     audio[count%5].play();
+    createjs.Sound.play("tap");
      this.remove();
      count++;
      setTimeout(function(){
